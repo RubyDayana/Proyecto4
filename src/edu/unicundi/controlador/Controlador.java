@@ -26,13 +26,17 @@ public class Controlador implements ActionListener{
     }
     
     public void iniciar(){
-        view.setLocation(null);
+        view.setLocationRelativeTo(null);
     }
+    
+    
+    
     
     @Override
     public void actionPerformed(ActionEvent e) {
         model.setTexto(view.texto.getText());
         model.agregar();
+        view.lista.setModel(null);
     }
     
 }

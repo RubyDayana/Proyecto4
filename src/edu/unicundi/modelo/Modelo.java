@@ -6,6 +6,7 @@
 package edu.unicundi.modelo;
 
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
 
 
 /**
@@ -18,7 +19,10 @@ public class Modelo {
 
     ArrayList listTexto  = new ArrayList ();
     public void agregar  (){
+        DefaultListModel modelo = new DefaultListModel();
+        
         listTexto.add(texto);
+        modelo.addElement(listTexto);
     }
 
     public String getTexto() {
