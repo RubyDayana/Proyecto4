@@ -11,7 +11,7 @@ import edu.unicundi.vista.Vista;
 
 /**
  *
- * @author Usuario
+ * @author Andres Gomez - Ruby Cardenas
  */
 public class MVC {
 
@@ -19,12 +19,16 @@ public class MVC {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Instancia del objeto modelo
        Modelo modelo = new Modelo();
+       //Instancia del objeto vista
        Vista view = new Vista();
+       //Instancia del objeto controlador enviadole los parametros al constructor
        Controlador controlador = new Controlador(view,modelo);
+       //Iniciamos la vista 
        controlador.iniciar();
        view.setVisible(true);
-        // TODO code application logic here
+        
     }
     
 }
